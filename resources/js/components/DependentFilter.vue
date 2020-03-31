@@ -1,8 +1,8 @@
 <template>
     <div v-show="loading || !filter.hideWhenEmpty || availableOptions.length > 0">
-        <h3 class="text-sm uppercase tracking-wide text-80 bg-30 p-3">{{ filter.name }}</h3>
+        <!-- <h3 class="text-sm uppercase tracking-wide text-80 bg-30 p-3">{{ filter.name }}</h3> -->
 
-        <div class="p-2">
+        <div class="">
             <select-control
                     :dusk="`${filter.name}-filter-select`"
                     class="block w-full form-control-sm form-select"
@@ -12,7 +12,7 @@
                     :label="optionValue"
                     :selected="value"
             >
-                <option value="" selected>&mdash;</option>
+                <option value="" selected>{{ filter.name }}</option>
             </select-control>
         </div>
     </div>
